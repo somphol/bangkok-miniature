@@ -1,5 +1,7 @@
 # Bangkok Miniature
 
+![Bangkok Miniature](docs/poster.png)
+
 An interactive 3D miniature of Bangkok built from scratch with React, TypeScript and three.js.
 The Chao Phraya runs through the middle of a floating tabletop tray; the historic east bank holds
 the Grand Palace, Wat Pho and the old town, the west bank holds Wat Arun, and the modern skyline
