@@ -6,6 +6,11 @@ All notable changes to Bangkok Miniature are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- The single-file build now embeds the third-party notices as an HTML comment, so the distributed
+  file carries the dependency licences with it.
+
 ## [0.1.0] - 2026-11-02
 
 Initial public release.

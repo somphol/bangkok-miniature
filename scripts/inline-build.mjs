@@ -30,6 +30,12 @@ if (/<script\b[^>]*\ssrc=/i.test(single) || /<link\b[^>]*rel=["']?stylesheet/i.t
   console.error('The inlined file still references an external script or stylesheet.')
   process.exit(1)
 }
+// Keep the dependency notices with the distributed build, not only in the repository.
+const noticesPath = resolve('THIRD_PARTY_NOTICES.txt')
+if (existsSync(noticesPath)) {
+  const notices = readFileSync(noticesPath, 'utf8').replace(/--/g, '- -')
+  single = single.replace('</head>', `<!--\nThird-party notices\n${notices}\n-->\n</head>`)
+}
 mkdirSync(dirname(out), { recursive: true })
 writeFileSync(out, single)
 const sha = createHash('sha256').update(single).digest('hex').slice(0, 16)
