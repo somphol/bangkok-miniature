@@ -1,0 +1,7 @@
+# The maintainer reviews every path.
+* @somphol
+
+/.github/ @somphol
+/docs/ @somphol
+/src/ @somphol
+/tests/ @somphol

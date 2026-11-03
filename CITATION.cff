@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use or reference this project, please cite it as below."
+title: Bangkok Miniature
+type: software
+authors:
+  - family-names: Boonjing
+    given-names: Somphol
+    alias: somphol
+    website: https://github.com/somphol
+repository-code: https://github.com/somphol/bangkok-miniature
+url: https://somphol.github.io/bangkok-miniature/
+license: MIT
+version: 0.1.1
+date-released: 2026-11-02
+keywords:
+  - bangkok
+  - three.js
+  - react
+  - typescript
+  - diorama
+  - 3d
+  - interactive
+abstract: "An interactive 3D miniature of Bangkok: the Chao Phraya, eight landmarks, procedural buildings, traffic, river boats and day/night lighting in one offline HTML file."

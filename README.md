@@ -4,7 +4,7 @@
 [![Live](https://img.shields.io/badge/live-bangkok--miniature-c99a3f)](https://somphol.github.io/bangkok-miniature/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-23423f)](LICENSE)
 
-**v0.1.0 · 22/22 verification checks · 8 landmarks · English / Thai**
+**v0.1.1 · 22/22 verification checks · 8 landmarks · English / Thai**
 
 ![Bangkok Miniature](docs/poster.png)
 
@@ -70,18 +70,26 @@ file runs under `sandbox allow-scripts; default-src 'none'; …` with no externa
 | [Getting started](docs/getting-started.md) | Install, run, build, controls and URL parameters |
 | [Architecture](ARCHITECTURE.md) | Construction order, coordinates, road graph, rendering and capture |
 | [Verification](docs/verification.md) | Unit/geometry tests, headless checks and the capture API |
+| [Capture API](docs/api.md) | `window.__scene` reference and a Playwright example |
 | [Deployment](docs/deployment.md) | GitHub Pages, single-file build, CSP, caching and rollback |
+| [Release process](docs/release-process.md) | Versioning, release/hotfix/rollback and artifacts |
 | [Customization](docs/customization.md) | Move a landmark, add a family, change geography or add a locale |
 | [Landmarks](docs/landmarks.md) | Anchor/view table, model notes and envelope invariants |
 | [Performance](docs/performance.md) | Budgets, instancing, shadows, water and profiling |
 | [Internationalization](docs/i18n.md) | English/Thai copy, adding a locale and typography |
 | [Design notes](docs/design-notes.md) | Art direction, composition, palette, camera and UI |
+| [Browser support](docs/browser-support.md) | WebGL 2, tested browsers, layouts, input and limits |
+| [FAQ](docs/faq.md) | Accuracy, licensing, scale, audio, embedding and troubleshooting |
+| [Privacy](PRIVACY.md) | No accounts, analytics, storage or runtime requests |
+| [Accessibility](ACCESSIBILITY.md) | Keyboard, screen reader, reduced motion and known gaps |
+| [Governance](GOVERNANCE.md) | Maintainer, decisions, releases and security |
 | [Changelog](CHANGELOG.md) | Release history |
 | [Contributing](CONTRIBUTING.md) | Setup, tests, style, pull requests and the release checklist |
 | [Security](SECURITY.md) | Supported versions, reporting and the offline/CSP model |
 | [Support](SUPPORT.md) | Where to ask and what to include |
 | [Attribution](ATTRIBUTION.md) | Provenance, inspiration and dependency licences |
 | [Roadmap](ROADMAP.md) | Directions and non-goals |
+| [Citation](CITATION.cff) | Citation metadata |
 
 ## How it is put together
 

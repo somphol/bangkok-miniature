@@ -9,7 +9,8 @@ compressed and interpretive, not a map or GIS product.
 
 The deployable artifact is `dist-single/index.html`; the published copy is `docs/index.html`. The
 source is a Vite + React + TypeScript + three.js project. Release docs live in `CHANGELOG.md`,
-`CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `ARCHITECTURE.md` and `docs/`.
+`CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `ARCHITECTURE.md`, `PRIVACY.md`,
+`ACCESSIBILITY.md`, `GOVERNANCE.md` and `docs/`.
 
 ## Commands
 
@@ -93,6 +94,6 @@ UI: `src/App.tsx`, `src/i18n.ts`, `src/style.css`. The capture surface is instal
 - Published copy: `docs/index.html`, generated with
   `npm run build:single && cp dist-single/index.html docs/index.html`. Keep `docs/.nojekyll`.
 - Screenshots: `shots/` (ignored by git); the README poster is `docs/poster.png`.
-- Release: `v0.1.0` tag and GitHub release; private vulnerability reporting is enabled.
+- Release: `v0.1.1` tag and GitHub release; private vulnerability reporting is enabled.
 - CI: `.github/workflows/ci.yml` runs typecheck/tests/build on Node 22 and 24, plus the headless
   interaction checks on Linux Chromium.

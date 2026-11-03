@@ -52,7 +52,7 @@ itself still works.
 The file name is stable, so a browser or CDN may cache the old build. After a deploy:
 
 - check the Pages build status in the repository's Actions/Pages panel;
-- hard-refresh, or append a query string such as `?v=0.1.0`;
+- hard-refresh, or append a query string such as `?v=0.1.1`;
 - for a CDN, purge the path or use a short cache TTL for `index.html`.
 
 The scene itself has no versioned API and no service worker, so there is no cache migration to

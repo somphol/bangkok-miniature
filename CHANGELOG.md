@@ -6,10 +6,34 @@ All notable changes to Bangkok Miniature are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-02
+
+Documentation and packaging release.
+
+### Added
+
+- A complete release documentation set: README documentation index, architecture, getting started,
+  verification, deployment, customization, landmarks, performance, internationalization, design
+  notes, FAQ, browser support, capture API reference and release process.
+- Project policies and community files: privacy, accessibility, governance, security, support,
+  code of conduct, attribution, roadmap, citation metadata and third-party notices.
+- GitHub issue forms, a pull request template, CODEOWNERS, Dependabot and a CI workflow that runs
+  typecheck/tests/build on Node 22 and 24 plus the headless interaction checks on Linux Chromium.
+- `.editorconfig` and `.nvmrc`.
+- Private vulnerability reporting enabled on the repository.
+
 ### Changed
 
 - The single-file build now embeds the third-party notices as an HTML comment, so the distributed
   file carries the dependency licences with it.
+- The README now carries CI/live/licence badges and a documentation index.
+
+### Verification
+
+- `npm test` passes.
+- `npm run verify` passes 22/22 checks under the sandbox CSP.
+- CI is green on Node 22, Node 24 and the Linux headless interaction job.
+- The published page was loaded in headless Chrome with no page errors.
 
 ## [0.1.0] - 2026-11-02
 
@@ -57,5 +81,6 @@ Initial public release.
 - The project is released under the MIT licence; third-party notices are in
   [THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
 
-[Unreleased]: https://github.com/somphol/bangkok-miniature/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/somphol/bangkok-miniature/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/somphol/bangkok-miniature/releases/tag/v0.1.1
 [0.1.0]: https://github.com/somphol/bangkok-miniature/releases/tag/v0.1.0

@@ -1,7 +1,7 @@
 import type { LandmarkId } from './scene/geography'
 
 export const SLUG = 'bangkok-miniature'
-export const VERSION = '0.1.0'
+export const VERSION = '0.1.1'
 
 export const LANDMARK_IDS: LandmarkId[] = [
   'grand-palace',
