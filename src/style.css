@@ -671,9 +671,15 @@ body[data-layout="compact"] .loading {
 body[data-layout="compact"] .toast {
   bottom: 120px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1350px) {
   .landmark-label {
     display: none;
+  }
+  .landmark-buttons button svg {
+    display: none;
+  }
+  .landmark-name {
+    font-size: 10px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
