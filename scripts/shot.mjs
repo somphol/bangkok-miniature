@@ -21,9 +21,22 @@ const server = createServer(async (req, res) => {
 })
 await new Promise((r) => server.listen(0, '127.0.0.1', r))
 const base = `http://127.0.0.1:${server.address().port}/`
-const chrome = process.env.CHROME_PATH ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
-if (!existsSync(chrome)) {
-  console.error('Chrome not found')
+let playwrightChrome = ''
+try {
+  playwrightChrome = chromium.executablePath()
+} catch {
+  playwrightChrome = ''
+}
+const chrome = [
+  process.env.CHROME_PATH,
+  playwrightChrome,
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/usr/bin/google-chrome',
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
+].find((candidate) => candidate && existsSync(candidate))
+if (!chrome) {
+  console.error('Chrome not found. Install Chrome/Chromium or set CHROME_PATH.')
   process.exit(1)
 }
 const browser = await chromium.launch({

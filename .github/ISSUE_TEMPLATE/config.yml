@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Live site
+    url: https://somphol.github.io/bangkok-miniature/
+    about: Open the published miniature before filing a visual issue.
+  - name: Documentation
+    url: https://github.com/somphol/bangkok-miniature/tree/main/docs
+    about: Setup, architecture, verification, deployment and customization guides.
+  - name: Security policy
+    url: https://github.com/somphol/bangkok-miniature/security/policy
+    about: Report a security problem privately; do not open a public issue.

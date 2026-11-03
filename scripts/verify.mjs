@@ -1,6 +1,6 @@
 // Deterministic interaction check for the single-file build: drives window.__scene in capture
 // mode and advances virtual time, so results do not depend on frame rate or a GPU.
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { createServer } from 'node:http'
 import { chromium } from 'playwright-core'
 
@@ -28,7 +28,24 @@ const server = createServer((req, res) => {
 })
 await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve))
 const base = `http://127.0.0.1:${server.address().port}/`
-const chrome = process.env.CHROME_PATH ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+let playwrightChrome = ''
+try {
+  playwrightChrome = chromium.executablePath()
+} catch {
+  playwrightChrome = ''
+}
+const chrome = [
+  process.env.CHROME_PATH,
+  playwrightChrome,
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/usr/bin/google-chrome',
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
+].find((candidate) => candidate && existsSync(candidate))
+if (!chrome) {
+  console.error('Chrome not found. Install Chrome/Chromium or set CHROME_PATH.')
+  process.exit(1)
+}
 const browser = await chromium.launch({
   executablePath: chrome,
   headless: true,
