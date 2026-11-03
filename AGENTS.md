@@ -84,7 +84,9 @@ UI: `src/App.tsx`, `src/i18n.ts`, `src/style.css`. The capture surface is instal
 ## Continuity
 
 - Local project: `/Users/somphol/bangkok-miniature`.
+- Repository: <https://github.com/somphol/bangkok-miniature>.
+- Live site: <https://somphol.github.io/bangkok-miniature/> (Pages source `main` / `docs`).
 - Single-file artifact: `dist-single/index.html` (about 900 KB, sha printed by the build).
-- Screenshots: `shots/` (ignored by git).
-- No GitHub repository has been created from this session; the project is ready to publish. If it
-  is published, keep this file at the repository root and copy the single file to the Pages target.
+- Published copy: `docs/index.html`, generated with
+  `npm run build:single && cp dist-single/index.html docs/index.html`. Keep `docs/.nojekyll`.
+- Screenshots: `shots/` (ignored by git); the README poster is `docs/poster.png`.

@@ -11,6 +11,8 @@ and a neon night.
 
 The geography is compressed for the diorama: it is a recognisable Bangkok, not a survey map.
 
+**Live:** <https://somphol.github.io/bangkok-miniature/>
+
 ## Landmarks
 
 | # | Landmark | District |
@@ -97,4 +99,11 @@ chosen button and info card, day/night, reset, zoom, orbit, pan, rotate, both lo
 - The implementation is original. It shares the general idea of a landmark-driven tabletop
   diorama with other city miniatures, but no San Francisco scene code or geography is reused.
 
-The deployable artifact is `dist-single/index.html`.
+The deployable artifact is `dist-single/index.html`. The published copy lives at
+`docs/index.html` for GitHub Pages.
+
+## Licence
+
+The Bangkok Miniature source is released under the MIT licence. The production bundle includes
+React, React DOM, Scheduler and three.js, all MIT; their notices are in
+[THIRD_PARTY_NOTICES.txt](THIRD_PARTY_NOTICES.txt).
