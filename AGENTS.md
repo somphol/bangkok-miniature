@@ -7,14 +7,17 @@ floating tray into the historic east bank and Thonburi, with eight dedicated lan
 ordinary building families, traffic, river boats, day/night lighting and English/Thai UI. It is
 compressed and interpretive, not a map or GIS product.
 
-The deployable artifact is `dist-single/index.html`. The source is a Vite + React + TypeScript +
-three.js project.
+The deployable artifact is `dist-single/index.html`; the published copy is `docs/index.html`. The
+source is a Vite + React + TypeScript + three.js project. Release docs live in `CHANGELOG.md`,
+`CONTRIBUTING.md`, `SECURITY.md`, `SUPPORT.md`, `ARCHITECTURE.md` and `docs/`.
 
 ## Commands
 
 ```sh
 npm ci
 npm run dev            # live dev server
+npm run typecheck      # tsc --noEmit
+npm run build          # typecheck + vite build into dist/
 npm run build:single   # tsc + vite build + inline -> dist-single/index.html
 npm test               # plan/geometry checks with tsx, no browser
 npm run verify         # build:single, then headless-Chrome interaction checks
@@ -90,3 +93,6 @@ UI: `src/App.tsx`, `src/i18n.ts`, `src/style.css`. The capture surface is instal
 - Published copy: `docs/index.html`, generated with
   `npm run build:single && cp dist-single/index.html docs/index.html`. Keep `docs/.nojekyll`.
 - Screenshots: `shots/` (ignored by git); the README poster is `docs/poster.png`.
+- Release: `v0.1.0` tag and GitHub release; private vulnerability reporting is enabled.
+- CI: `.github/workflows/ci.yml` runs typecheck/tests/build on Node 22 and 24, plus the headless
+  interaction checks on Linux Chromium.
