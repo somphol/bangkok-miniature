@@ -186,12 +186,12 @@ function buildRoads(kit: Kit, roads: Road[], occupied: (x: number, z: number, ma
       kit.box(mx, TRAY.roadY, mz, len + 0.02, 0.035, width, road.bridge ? '#59605c' : '#4f5a5c', 'wall', yaw)
       for (const s of [-1, 1]) {
         const off = (width / 2 + 0.045) * s
-        kit.box(mx + nx * off, 0.682, mz + nz * off, Math.max(0.01, len - 0.16), 0.045, 0.06, '#bdb6a0', 'wall', yaw)
-        kit.box(mx + nx * (width / 2 + 0.012) * s, 0.69, mz + nz * (width / 2 + 0.012) * s, Math.max(0.01, len - 0.16), 0.018, 0.015, '#d8d0b8', 'wall', yaw)
+        kit.box(mx + nx * off, 0.682, mz + nz * off, Math.max(0.01, len - 0.16), 0.045, 0.06, '#b0a892', 'wall', yaw)
+        kit.box(mx + nx * (width / 2 + 0.012) * s, 0.69, mz + nz * (width / 2 + 0.012) * s, Math.max(0.01, len - 0.16), 0.018, 0.015, '#c9c1a9', 'wall', yaw)
       }
-      if (road.width >= 0.2) {
-        for (let t = 0.16; t < len - 0.1; t += 0.42)
-          kit.box(a[0] + (dx * t) / len, 0.672, a[1] + (dz * t) / len, 0.07, 0.005, 0.007, '#c9b77a', 'wall', yaw)
+      if (road.width >= 0.24) {
+        // One continuous centre line on the major roads; the sois stay unmarked.
+        kit.box(mx, 0.672, mz, Math.max(0.05, len * 0.9), 0.005, 0.012, '#b9a86a', 'wall', yaw)
       }
       if (road.bridge) {
         kit.box(mx, 0.625, mz, len + 0.04, 0.06, width + 0.16, '#9a9a8a', 'wall', yaw)

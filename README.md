@@ -88,7 +88,7 @@ chosen button and info card, day/night, reset, zoom, orbit, pan, rotate, both lo
 ## Notes
 
 - The geography is interpretive and compressed; positions and scales are not survey data.
-- The city is intentionally dense but small: about 145 buildings, 1,200 road edges, 40 vehicles
+- The city is intentionally dense but small: about 140 buildings, 1,200 road edges, 40 vehicles
   and 3 boats on the river.
 - Headless Chrome on this Mac falls back to SwiftShader; `npm run verify` is the frame-rate
   independent check. The live page is happiest with hardware WebGL 2.

@@ -92,7 +92,7 @@ export const LANDMARKS: LandmarkAnchor[] = [
   },
   {
     id: 'baiyoke',
-    x: 2.2,
+    x: 2.4,
     z: 2.6,
     y: 0.69,
     w: 1.2,

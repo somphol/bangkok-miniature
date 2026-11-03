@@ -46,7 +46,7 @@ const targets = {
   'wat-pho': [2.2, 1.5, -4.3],
   'giant-swing': [2.2, 1.9, -2.0],
   'golden-mount': [3.0, 1.8, 0.0],
-  baiyoke: [2.2, 4.5, 2.6],
+  baiyoke: [2.4, 4.5, 2.6],
   mahanakhon: [2.9, 4.2, 6.4],
   'rama-viii': [-0.35, 2.2, -13.6],
 }

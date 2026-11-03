@@ -266,11 +266,20 @@ export function goldenMount(kit: Kit, x: number, z: number, yaw = 0) {
   kit.cylinder(0, 0.58, 0, 0.62, 1.16, green, 'green', 0.3, 16)
   kit.cylinder(0, 0.12, 0, 0.72, 0.2, '#7d9460', 'green', 0.68, 16)
   kit.cylinder(0, 0.11, 0, 0.74, 0.18, '#c9b89a', 'wall', 0.72, 16)
-  for (let i = 0; i < 40; i++) {
-    const angle = i * 0.44
-    const radius = 0.61 - i * 0.0075
-    const y = 0.14 + i * 0.026
-    kit.box(Math.cos(angle) * radius, y, Math.sin(angle) * radius, 0.13, 0.028, 0.17, stone, 'wall', -angle)
+  // A continuous spiral ramp, with shallow stone steps cut into it.
+  const helix: THREE.Vector3[] = []
+  for (let i = 0; i <= 96; i++) {
+    const t = i / 96
+    const angle = t * Math.PI * 2 * 4
+    const radius = 0.62 - 0.33 * t
+    helix.push(new THREE.Vector3(Math.cos(angle) * radius, 0.16 + 0.98 * t, Math.sin(angle) * radius))
+  }
+  kit.geometry(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(helix), 140, 0.028, 5, false), '#c9b89a', 'wall')
+  for (let i = 0; i < 18; i++) {
+    const t = (i + 0.5) / 18
+    const angle = t * Math.PI * 2 * 4
+    const radius = 0.62 - 0.33 * t
+    kit.box(Math.cos(angle) * radius, 0.16 + 0.98 * t + 0.015, Math.sin(angle) * radius, 0.07, 0.02, 0.11, '#d8c8a8', 'wall', -angle)
   }
   // Golden chedi on the summit, with a ceremonial umbrella.
   chedi(kit, 0, 0, 0.18, 1.25, 1.12, gold, '#f7e6ad')
